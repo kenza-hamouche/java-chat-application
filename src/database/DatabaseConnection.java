@@ -11,7 +11,7 @@ public class DatabaseConnection {
     public static Connection getConnection() {
         try {
             Connection conn = DriverManager.getConnection(URL);
-            System.out.println("Connexion à la base réussie !");
+            //System.out.println("Connexion à la base réussie !");
             return conn;
         } catch (SQLException e) {
             System.out.println("Erreur de connexion !");
@@ -23,7 +23,7 @@ public class DatabaseConnection {
     public static void createTables() {
     String usersTable = "CREATE TABLE IF NOT EXISTS users ("
             + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + "username TEXT NOT NULL, "
+            + "username TEXT NOT NULL UNIQUE, "
             + "password TEXT NOT NULL"
             + ");";
 
@@ -32,7 +32,7 @@ public class DatabaseConnection {
             + "sender_id INTEGER, "
             + "receiver_id INTEGER, "
             + "content TEXT, "
-            + "timestamp TEXT"
+            + "timestamp TEXT DEFAULT CURRENT_TIMESTAMP"
             + ");";
 
     String groupsTable = "CREATE TABLE IF NOT EXISTS groups ("
