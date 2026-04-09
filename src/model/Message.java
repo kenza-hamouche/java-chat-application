@@ -3,24 +3,27 @@ package model;
 public class Message {
     private int id;
     private int senderId;
-    private int receiverId;
+    private Integer receiverId;
+    private Integer groupId;
     private String content;
     private String timestamp;
 
     public Message() {
     }
 
-    public Message(int id, int senderId, int receiverId, String content, String timestamp) {
+    public Message(int id, int senderId, Integer receiverId, Integer groupId, String content, String timestamp) {
         this.id = id;
         this.senderId = senderId;
         this.receiverId = receiverId;
+        this.groupId = groupId;
         this.content = content;
         this.timestamp = timestamp;
     }
 
-    public Message(int senderId, int receiverId, String content) {
+    public Message(int senderId, Integer receiverId, Integer groupId, String content) {
         this.senderId = senderId;
         this.receiverId = receiverId;
+        this.groupId = groupId;
         this.content = content;
     }
 
@@ -42,12 +45,21 @@ public class Message {
     }
 
 
-    public int getReceiverId() {
+    public Integer getReceiverId() {
         return receiverId;
     }
 
-    public void setReceiverId(int receiverId) {
+    public void setReceiverId(Integer receiverId) {
         this.receiverId = receiverId;
+    }
+
+
+    public Integer getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Integer groupId) {
+        this.groupId = groupId;
     }
 
 
@@ -70,8 +82,12 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message{id=" + id + ", senderId=" + senderId +
-                ", receiverId=" + receiverId + ", content='" + content +
-                "', timestamp='" + timestamp + "'}";
+        return "Message{id=" + id
+                + ", senderId=" + senderId
+                + ", receiverId=" + receiverId
+                + ", groupId=" + groupId
+                + ", content='" + content + '\''
+                + ", timestamp='" + timestamp + '\''
+                + '}';
     }
 }
