@@ -53,21 +53,6 @@ Elle permet à plusieurs utilisateurs de communiquer en temps réel, en privé o
   - Accès aux données
 
 ---
-
-## 🏗️ Architecture du projet
-
-chatapp-3/
-│
-├── server/ → Serveur (gestion des connexions, logique métier)
-├── client/ → Client (interface utilisateur + communication)
-│ └── ui/ → Interfaces Swing
-├── dao/ → Accès base de données (DAO)
-├── model/ → Modèles (User, Message, Group...)
-├── lib/ → Dépendances (SQLite JDBC)
-├── schema.sql → Structure de la base de données
-└── chat.db → Base SQLite
-
----
 ## ⚙️ Lancer l'application
 
 ### 📦 Compilation du projet
