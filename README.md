@@ -55,9 +55,9 @@ Elle permet à plusieurs utilisateurs de communiquer en temps réel, en privé o
 ---
 ## ⚙️ Lancer l'application
 
-### 📦 Compilation du projet
+### 📦 Compilation
 
-Sur Linux / Mac  
+Sur Mac / Linux  
 commande : javac -cp "lib/sqlite-jdbc-3.51.3.0.jar" -d out $(find src -name "*.java")
 
 Sur Windows  
@@ -67,22 +67,22 @@ commande : javac -cp "lib/sqlite-jdbc-3.51.3.0.jar" -d out src\**\*.java
 
 ### 🚀 Lancer le serveur
 
-Sur Linux / Mac  
-commande : java -cp "out:lib/sqlite-jdbc-3.51.3.0.jar" server.Server
+Sur Mac / Linux  
+commande : java -cp "out:lib/sqlite-jdbc-3.51.3.0.jar" server.serveur
 
 Sur Windows  
-commande : java -cp "out;lib/sqlite-jdbc-3.51.3.0.jar" server.Server
+commande : java -cp "out;lib/sqlite-jdbc-3.51.3.0.jar" server.serveur
 
 ---
 
 ### 💬 Lancer le client
 
-Sur Linux / Mac  
-commande : java -cp "out:lib/sqlite-jdbc-3.51.3.0.jar" client.Main
+Sur Mac / Linux  
+commande : java -cp "out:lib/sqlite-jdbc-3.51.3.0.jar" client.Client
 
 Sur Windows  
-commande : java -cp "out;lib/sqlite-jdbc-3.51.3.0.jar" client.Main
+commande : java -cp "out;lib/sqlite-jdbc-3.51.3.0.jar" client.Client
 
 ---
 
-👉 Pour tester l'application, lancer d'abord le serveur, puis un ou plusieurs clients dans des terminaux différents.
+👉 Pour tester l'application : lancer d'abord le serveur, puis un ou plusieurs clients dans des terminaux différents.
